@@ -1,5 +1,5 @@
 %define version 2.1.12
-%define release %mkrel 2
+%define release %mkrel 3
 %define major 0
 %define libname %mklibname %{name}_ %{major}
 %define develname %mklibname %{name} -d
@@ -49,8 +49,8 @@ the udunits library.
 Group: Development/Other
 Summary: Headers and libraries for udunits
 Requires: %{name} = %{version}-%{release}
-Provides: lib%{name} = %{version}-%{release}
-Provides: %{name} = %{version}-%{release}
+Provides: lib%{name}-devel = %{version}-%{release}
+Provides: %{name}-devel = %{version}-%{release}
 
 
 %description -n %{develname}
