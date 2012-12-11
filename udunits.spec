@@ -1,5 +1,5 @@
-%define version 2.1.19
-%define release %mkrel 2
+%define version 2.1.12
+%define release %mkrel 3
 %define major 0
 %define libname %mklibname %{name}_ %{major}
 %define develname %mklibname %{name} -d
@@ -102,4 +102,20 @@ rm -rf %{buildroot}
 %{_includedir}/%{name}/*.h
 %{_libdir}/*.so
 %{_libdir}/*.a
+
+
+
+%changelog
+* Wed Feb 17 2010 Emmanuel Andry <eandry@mandriva.org> 2.1.12-3mdv2010.1
++ Revision: 507289
+- fix provides
+
+* Tue Jan 19 2010 Emmanuel Andry <eandry@mandriva.org> 2.1.12-2mdv2010.1
++ Revision: 493468
+- add missing provides
+
+* Sat Jan 16 2010 Emmanuel Andry <eandry@mandriva.org> 2.1.12-1mdv2010.1
++ Revision: 492387
+- import udunits2
+
 
