@@ -1,5 +1,5 @@
 %define version 2.1.12
-%define release %mkrel 3
+%define release 4
 %define major 0
 %define libname %mklibname %{name}_ %{major}
 %define develname %mklibname %{name} -d
