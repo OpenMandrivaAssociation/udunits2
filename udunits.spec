@@ -100,7 +100,6 @@ install -p -m0644 ANNOUNCEMENT udunits2.pdf %{buildroot}%{_docdir}/%{name}/
 %defattr(-,root,root)
 %{_includedir}/%{name}/*.h
 %{_libdir}/*.so
-%{_libdir}/*.a
 
 
 
