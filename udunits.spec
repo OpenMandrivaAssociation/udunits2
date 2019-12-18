@@ -17,6 +17,7 @@ BuildRequires: gcc-gfortran, gcc-c++, groff
 BuildRequires: perl-devel
 BuildRequires: bison
 BuildRequires: pkgconfig(expat)
+BuildRequires: texinfo
 
 %description
 The Unidata units utility, udunits, supports conversion of unit specifications 
