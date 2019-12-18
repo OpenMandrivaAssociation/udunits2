@@ -1,19 +1,18 @@
-%define version 2.2.26
-%define release 1
 %define major 0
 %define libname %mklibname %{name}_ %{major}
 %define develname %mklibname %{name} -d
 
 Name: udunits2
-Version: %version
-Release: %release
+Version: 2.2.26
+Release: 1
 Summary: A library for manipulating units of physical quantities
 License: Freely distributable (BSD-like)
 Group: Sciences/Mathematics
 URL: http://my.unidata.ucar.edu/content/software/udunits/index.html
 Source0: ftp://ftp.unidata.ucar.edu/pub/udunits/udunits-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: gcc-gfortran, gcc-c++, groff
+BuildRequires: gcc-gfortran
+BuildRequires: groff
 BuildRequires: perl-devel
 BuildRequires: bison
 BuildRequires: pkgconfig(expat)
@@ -87,7 +86,7 @@ install -p -m0644 ANNOUNCEMENT udunits2.pdf %{buildroot}%{_docdir}/%{name}/
 
 %files
 %defattr(-,root,root)
-%doc ANNOUNCEMENT CHANGE_LOG LICENSE
+%doc ANNOUNCEMENT CHANGE_LOG
 %doc udunits2.html udunits2.pdf
 %{_bindir}/%{name}
 %{_datadir}/udunits/*.xml
