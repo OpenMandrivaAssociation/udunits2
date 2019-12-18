@@ -88,6 +88,7 @@ install -p -m0644 ANNOUNCEMENT udunits2.pdf %{buildroot}%{_docdir}/%{name}/
 %defattr(-,root,root)
 %doc ANNOUNCEMENT CHANGE_LOG
 %doc udunits2.html udunits2.pdf
+%doc %{_docdir}/%{name}
 %{_bindir}/%{name}
 %{_datadir}/udunits/*.xml
 %{_infodir}/*.info*
