@@ -68,23 +68,21 @@ export CXXFLAGS="%{optflags} -fPIC"
 %endif
 export LD_MATH=-lm 
 
-%configure2_5x
+%configure2_5x --disable-static --docdir %{_docdir}/%{name}
 
-%make 
+%make_build
 
 %install
-rm -rf %{buildroot}
-%makeinstall
-mkdir -p %{buildroot}%{_infodir}/
-install -p -m0644 *.info %{buildroot}%{_infodir}
+%make_install install-html
 
 # We need to do this to avoid conflicting with udunits v1
 mkdir -p %{buildroot}%{_includedir}/%{name}/
 mv %{buildroot}%{_includedir}/*.h %{buildroot}%{_includedir}/%{name}/
-rm -rf %{buildroot}%{_libdir}/*.la
+# Don't ship static libs
+find %{buildroot} -name '*.la' -delete
 
-%clean
-rm -rf %{buildroot}
+# doc
+install -p -m0644 ANNOUNCEMENT udunits2.pdf %{buildroot}%{_docdir}/%{name}/
 
 %files
 %defattr(-,root,root)
