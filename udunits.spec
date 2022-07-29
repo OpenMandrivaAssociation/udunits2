@@ -3,7 +3,7 @@
 %define develname %mklibname %{name} -d
 
 Name: udunits2
-Version: 2.2.26
+Version: 2.2.28
 Release: 1
 Summary: A library for manipulating units of physical quantities
 License: Freely distributable (BSD-like)
