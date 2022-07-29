@@ -85,9 +85,6 @@ find %{buildroot} -name '*.la' -delete
 install -p -m0644 udunits2.pdf %{buildroot}%{_docdir}/%{name}/
 
 %files
-%defattr(-,root,root)
-%doc CHANGE_LOG
-%doc udunits2.html udunits2.pdf
 %doc %{_docdir}/%{name}
 %{_bindir}/%{name}
 %{_datadir}/udunits/*.xml
