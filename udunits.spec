@@ -82,11 +82,11 @@ mv %{buildroot}%{_includedir}/*.h %{buildroot}%{_includedir}/%{name}/
 find %{buildroot} -name '*.la' -delete
 
 # doc
-install -p -m0644 ANNOUNCEMENT udunits2.pdf %{buildroot}%{_docdir}/%{name}/
+install -p -m0644 udunits2.pdf %{buildroot}%{_docdir}/%{name}/
 
 %files
 %defattr(-,root,root)
-%doc ANNOUNCEMENT CHANGE_LOG
+%doc CHANGE_LOG
 %doc udunits2.html udunits2.pdf
 %doc %{_docdir}/%{name}
 %{_bindir}/%{name}
