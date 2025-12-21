@@ -11,6 +11,11 @@ Group: Sciences/Mathematics
 URL: https://my.unidata.ucar.edu/content/software/udunits/index.html
 Source0: ftp://ftp.unidata.ucar.edu/pub/udunits/udunits-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: gcc-gfortran
 BuildRequires: groff
 BuildRequires: perl-devel
